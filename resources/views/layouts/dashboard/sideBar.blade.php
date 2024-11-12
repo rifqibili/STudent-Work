@@ -8,11 +8,6 @@
                         <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
                     </a>
                 </li>
-                <li>
-                    <a class="has-arrow" href="{{ route('chat.index') }}" aria-expanded="false">
-                        <i class="icon-envelope menu-icon"></i> <span class="nav-text">Pesan</span>
-                    </a>
-                </li>
 
                 <li>
                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
@@ -68,11 +63,6 @@
                         <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
                     </a>
                 </li>
-                <li>
-                    <a class="has-arrow" href="{{ route('chat.index') }}" aria-expanded="false">
-                        <i class="icon-envelope menu-icon"></i> <span class="nav-text">Pesan</span>
-                    </a>
-                </li>
 
                 <li>
                     <a class="has-arrow" href="{{ route('dashboard.profile') }}" aria-expanded="false">
@@ -95,11 +85,6 @@
                 <li>
                     <a class="has-arrow" href="{{ route('dashboard') }}" aria-expanded="false">
                         <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="has-arrow" href="{{ route('chat.index') }}" aria-expanded="false">
-                        <i class="icon-envelope menu-icon"></i> <span class="nav-text">Pesan</span>
                     </a>
                 </li>
                 <li>

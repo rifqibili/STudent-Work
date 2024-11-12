@@ -62,7 +62,7 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('login.form');
+        return redirect()->route('home');
     }
 
     public function forgot_password ()

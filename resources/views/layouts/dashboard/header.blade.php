@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>GetTask</title>
+    <title>STudent Work</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset ('quixlab-master')}}/images/favicon.png">
     <!-- Pignose Calender -->
@@ -43,7 +43,7 @@
                     <b class="logo-abbr"><img src="{{asset ('quixlab-master')}}/images/logo.png" alt=""> </b>
                     <span class="logo-compact"><img src="{{asset ('quixlab-master')}}/images/logo-compact.png" alt=""></span>
                     <span class="brand-title">
-                        <img src="{{asset ('courses-master')}}/assets/img/logo/GetTask.png" alt="">
+                        <img src="{{asset ('courses-master')}}/assets/img/logo/lo - Copy.png" alt="">
                     </span>
                 </a>
             </div>

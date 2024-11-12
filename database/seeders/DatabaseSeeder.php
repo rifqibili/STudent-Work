@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
                 'password'=> Hash::make('pembuatbuat'),
                 'role'=> 'pembuat',
                 'keahlian' => 'php,laravel',
-                'linkedin' =>'https://www.linkedin.com/in/rofiif-nabil-syafaqoh-970953270/',
+                'linkedin' =>'',
                 'status' => null
             ],
             [
