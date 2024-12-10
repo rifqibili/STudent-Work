@@ -19,16 +19,6 @@
                             </div>
                         </div>
 
-                        <div class="row mb-5">
-                            <div class="col">
-                                <div class="card card-profile text-center">
-                                    <span class="mb-1 text-warning"><i class="fa-solid fa-list-check"></i></span>
-                                    <h3 class="mb-0">263</h3>
-                                    <p class="text-muted">Followers</p>
-                                </div>
-                            </div>
-                        </div>
-
                         <h4>Tentang Saya</h4>
                         <ul class="card-profile__info">
                             <li><strong class="text-dark mr-4">Email</strong> <span>{{ $user->email }}</span></li>
@@ -85,27 +75,8 @@
                                                   
                         @endif
 
-                        <div class="form-group row">
-                            <label class="col-lg-4 col-form-label" for="val-currency">Dibuat Pada <span
-                                    class="text-danger">:</span>
-                            </label>
-                            <div class="col-lg-6">
-                                <h4>{{ $user->created_at }}</h4>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-lg-4 col-form-label" for="val-currency">Terakhir kali di ubah Pada <span
-                                    class="text-danger">:</span>
-                            </label>
-                            <div class="col-lg-6">
-                                <h4>{{ $user->updated_at }}</h4>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-lg-8 ml-auto">
-                                <button type="submit" class="btn btn-primary">Edit</button>
-                            </div>
-                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>

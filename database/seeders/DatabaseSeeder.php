@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'id'=> 1,
-                'foto' => 'donuts.png',
+                'foto' => 'admin.jpeg',
                 'name'=>'Admin',
                 'email'=>'hasAdmin@admin.com',
                 'password' =>Hash::make('adminhebat'),
@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id'=> 2,
-                'foto' => 'photoprofil.png',
+                'foto' => 'admin.jpeg',
                 'name'=> 'Pembuat',
                 'email'=> 'buat@buat.com',
                 'password'=> Hash::make('pembuatbuat'),
@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id'=> 3,
-                'foto' => 'R.jpg',
+                'foto' => 'admin.jpeg',
                 'name'=> 'penyedia',
                 'email'=> 'penyedia@penyedia.com',
                 'password'=> Hash::make('penyediadia'),

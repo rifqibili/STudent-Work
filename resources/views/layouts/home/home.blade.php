@@ -17,9 +17,6 @@
                                 @if (!Auth::check())
                                     <a href="{{route('register')}}" class="genric-btn info circle arrow e-large" data-animation="fadeInLeft"
                                     data-delay="0.7s">Gabung Menjadi Penyedia</a> 
-                                    <strong class="text-white">ATAU</strong>
-                                    <a href="{{route('eula')}}" class="genric-btn info circle arrow e-large" data-animation="fadeInLeft"
-                                    data-delay="0.7s">Gabung Menjadi Pengerja</a>
                                 @elseif (Auth::user()->role === 'penyedia')
                                 <a href="{{route('eula')}}" class="genric-btn info circle arrow e-large" data-animation="fadeInLeft"
                                     data-delay="0.7s">Gabung Menjadi Pengerja</a>

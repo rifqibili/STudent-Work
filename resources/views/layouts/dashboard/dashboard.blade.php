@@ -235,7 +235,7 @@
 
 <div class="footer">
     <div class="copyright">
-        <p>Contact Admin <a href=mailto:storagerofif17drive@gmail.com>Hubungi kami</a> </p>
+        <p>Contact Admin <a href=mailto:m.rifqialardabili@gmail.com>Hubungi kami</a> </p>
     </div>
 </div>
 

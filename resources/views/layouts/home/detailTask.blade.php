@@ -154,8 +154,7 @@
 
                                             <a href="{{ route('submit.form', $task->id) }}"
                                                 class="genric-btn primary">Kumpulkan Tugas</a><br><br>
-                                            <a href="{{ route('chat.index', $task->user->id) }}"
-                                                class="btn btn-primary">Hubungi Penyedia</a>
+                                            
                                         @else
                                             <strong style="text-color = red">Status Anda : Ditolak</strong>
                                         @endif
@@ -192,8 +191,7 @@
                                     <h2>Status : Di Setujui</h2>
                                     <a href="{{ route('submit.view', $application->task->id) }}"
                                         class="btn btn-outline-secondary rounded-pill">Lihat Tugas</a><br><br>
-                                    <a href="{{ route('chat.index', $application->user->id) }}"
-                                        class="btn btn-primary">Hubungi Pengerja</a>
+                                    
                                 @endif
                             </div>
                             @if ($application->status == 'menunggu')
