@@ -32,15 +32,18 @@ Route::get('/EulaToWorker', function () {
 })->name('eula');
 
 Route::controller(AuthController::class)->group(function () {
-    Route::get('/register', 'regisForm')->name('register.form');
-    Route::post('/register', 'register')->name('register');
-    Route::get('/login', 'loginForm')->name('login.form');
-    Route::post('/login', 'login')->name('login');
-    Route::post('/logout', 'logout')->name('logout');
-    Route::get('/forgot-password', 'forgot_password')->name('forgot-password');
-    Route::post('/forgot-password', 'forgot_password_act')->name('forgot-password-act');
-    Route::get('/validasi-forgot-password/{token}', 'validasi_forgot_password')->name('validasi-forgot-password');
-    Route::post('/validasi-forgot-password', 'validasi_forgot_password_act')->name('validasi-forgot-password-act');
+    Route::middleware('guest')->group(function () {
+        Route::get('/register', 'regisForm')->name('register.form');
+        Route::post('/register', 'register')->name('register');
+        Route::get('/login', 'loginForm')->name('login.form');
+        Route::post('/login', 'login')->name('login');
+        Route::get('/forgot-password', 'forgot_password')->name('forgot-password');
+        Route::post('/forgot-password', 'forgot_password_act')->name('forgot-password-act');
+        Route::get('/validasi-forgot-password/{token}', 'validasi_forgot_password')->name('validasi-forgot-password');
+        Route::post('/validasi-forgot-password', 'validasi_forgot_password_act')->name('validasi-forgot-password-act');
+    });
+
+    Route::post('/logout', 'logout')->name('logout')->middleware('auth');
 });
 
 Route::controller(TaskController::class)->group(function () {

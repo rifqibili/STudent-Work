@@ -19,9 +19,16 @@ class RedirectIfAuthenticated
     {
         $guards = empty($guards) ? [null] : $guards;
 
+        // Jika pengguna sudah login, arahkan ke halaman terakhir mereka
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                // Simpan URL sebelumnya sebelum login
+                if ($request->routeIs('login.form')) {
+                    return redirect()->intended();
+                }
+
+                // Arahkan ke halaman terakhir jika sudah login
+                return redirect()->intended($request->session()->get('url.intended', '/'));
             }
         }
 
