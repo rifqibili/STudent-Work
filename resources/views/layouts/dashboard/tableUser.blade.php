@@ -17,7 +17,6 @@
                                         <th scope="col">Nama</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Role</th>
-                                        <th scope="col">Tindakan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -36,15 +35,7 @@
                                                 {{ $user->role }}
                                             </td>
                                             <td><span
-                                            <form action="{{ route('user.delete', $user) }}" method="POST"  class="delete-form">
-                                                @csrf
-                                                @method('delete')
-                                                <button type="submit" class="btn btn-outline-danger delete-btn" >Hapus</button>
-                                            </form>
-
-                                            <a href="{{ route('user.show', $user->id) }}" data-toggle="tooltip"
-                                                data-placement="top">  <button type="submit" class="btn btn-outline-info">Lihat</button>
-                                            </a>
+                                       
                                         </span>
                                             </td>
                                         </tr>

@@ -28,8 +28,7 @@
                                                 {{ $kategori->nama }}
                                             </td>
                                             <td><span><a href="{{ route('kategori.edit', $kategori) }}" data-toggle="tooltip"
-                                                data-placement="top" title="Edit">
-                                                <button type="submit" class="btn btn-outline-info">Edit</button>                                                    </a>
+                                                data-placement="top" title="Edit">                                                    </a>
                                             <form action="{{ route('kategori.delete', $kategori) }}" method="POST"  class="delete-form">
                                                 @csrf
                                                 @method('delete')

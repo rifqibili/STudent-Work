@@ -28,68 +28,30 @@
     <section class="blog_area section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mb-5 mb-lg-0">
 
-                    <div class="row">
-                        @foreach ($tasks as $task)
-                            <div class="col-sm-6">
-                                <img src="{{ asset('storage/gambar/task/' . $task->gambar1) }}" class="card-img-top" alt="..."
-                                width="200px" height="200px">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ $task->kategori->nama }}</h5>
-                                    <h1>{{ $task->judul }}</h1>
-                                    <p>Di buat oleh : {{ $task->user->name }}</p>
-                                    <p>Status Tugas: {{ $task->status_work }}</p>
-                                    <div class="properties__footer d-flex justify-content-between align-items-center">
-                                        <div class="restaurant-name">
-                                            <span class="">{{ $task->created_at }}</span>
-                                        </div>
-                                        <div class="price">
-                                        </div>
-                                    </div>
-                                    <a href="{{ route('task.show', $task->id) }}"
-                                        class="border-btn border-btn2">Selengkapnya</a>
-                                </div>
-                            </div>
-                        @endforeach
-
-                    </div>
-
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog_right_sidebar">
-                        <aside class="single_sidebar_widget search_widget">
-                            <form action="#">
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder='Search Keyword'
-                                            onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Search Keyword'">
-                                        <div class="input-group-append">
-                                            <button class="btns" type="button"><i class="ti-search"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                    type="submit">Search</button>
-                            </form>
-                        </aside>
-                        <aside class="single_sidebar_widget post_category_widget">
-                            <h4 class="widget_title" style="color: #2d2d2d;">Category</h4>
-                            <ul class="list cat-list">
-                                @foreach ($kategoris as $kategori)
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>{{$kategori -> nama}}</p>
-                                            <p>({{$taskCount}})</p>
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </aside>
-
+                <div class="row">
+    @foreach ($tasks->take(5) as $task) <!-- Mengambil 3 tugas saja -->
+        <div class="col-md-4 mb-4"> <!-- Membagi menjadi 3 kolom -->
+            <div class="card h-100">
+                <img src="{{ asset('storage/gambar/task/' . $task->gambar1) }}" class="card-img-top img-fluid" alt="..." style="height: 200px; object-fit: cover; width: 100%;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ $task->kategori->nama }}</h5>
+                    <h3>{{ $task->judul }}</h3>
+                    <p>Di buat oleh : {{ $task->user->name }}</p>
+                    <p>Status Tugas: {{ $task->status_work }}</p>
+                    <div class="mt-auto"> <!-- Memastikan tombol berada di bawah -->
+                        <span class="text-muted">{{ $task->created_at->format('d M Y') }}</span>
+                        <a href="{{ route('task.show', $task->id) }}" class="btn btn-primary d-block mt-2">Selengkapnya</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    @endforeach
+</div>
+
+
+                </div>
+                
             </div>
         </div>
     </section>

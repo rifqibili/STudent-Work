@@ -46,10 +46,6 @@
                 <div class="form-input pt-30">
                     <input type="submit" name="submit" value="login">
                 </div>
-
-                <!-- Forget Password -->
-                <a href="{{route ('forgot-password')}}" class="forget">Forget Password</a>
-                <!-- Forget Password -->
                 <a href="{{ route('register.form') }}" class="registration">Registration</a>
             </div>
         </form>
